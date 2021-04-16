@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 映射到指定的dao类 -->
+<mapper namespace="com.yidu.ssmdemo11.dao.UserDao">
+    <!-- 登录 -->
+    <select id="login" resultType="com.yidu.ssmdemo11.entity.UserInfo">
+        select * from userinfo
+        where userName=#{userName} and userPass=#{userPass}
+    </select>
+    <!-- 查询所有 -->
+    <select id="selectAll" resultType="com.yidu.ssmdemo11.entity.UserInfo">
+        select * from  userInfo
+    </select>
+    <insert id="add" parameterType="com.yidu.ssmdemo11.entity.UserInfo">
+        insert into userInfo(userName,userPass)values(#{username},#{userpass})
+
+    </insert>
+</mapper>
