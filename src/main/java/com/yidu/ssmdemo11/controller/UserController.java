@@ -21,6 +21,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    public void test(){
+        System.out.println("ok");
+    }
+
+
     /**
      * 登录
      * @param userName 表单中传过来的用户名
